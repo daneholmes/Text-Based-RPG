@@ -1,5 +1,5 @@
 # Final Quest
-A very simple ruby exploration game that runs in your terminal. It lets you move through a matrix and read the description of each cell in the array, like you are moving through a 5 by 5 world. There is a lot of the code that can be improved upon and the "game" can be made better, maybe one day I will. :)
+A minimal take on a text-based rpg. A very simple ruby exploration game that runs in your terminal. It lets you move through a matrix and read the description of each cell in the array, like you are moving through a 5 by 5 world.
 
 # Installation
 1. Open terminal
