@@ -52,34 +52,34 @@ end
 def room
     puts FQ::world_descriptions[$x][$y]
     while true
-        prompt; next_move = gets.chomp
+        prompt; next_move = gets.chomp.downcase
         if next_move == "help"
-            help; prompt; next_move = gets.chomp
+            help; prompt; next_move = gets.chomp.downcase
         end
         if next_move == "look"
             room()
-        elsif next_move == "north" && $y >= 1
+        elsif next_move == "north" || "n" && $y >= 1
             $y = $y - 1
             room()
-        elsif next_move == "north" && $y == 0
+        elsif next_move == "north" || "n" && $y == 0
             puts "It is impossible to move further north!".light_yellow
         
-        elsif next_move == "south" && $y <= 3
+        elsif next_move == "south" || "s"  && $y <= 3
             $y = $y + 1
             room()
-        elsif next_move == "south" && $y == 4
+        elsif next_move == "south" || "s"  && $y == 4
             puts "It is impossible to move further south!".light_yellow
         
-        elsif next_move == "east" && $x <= 3
+        elsif next_move == "east" || "e"  && $x <= 3
             $x = $x + 1
             room()
-        elsif next_move == "east" && $x == 4
+        elsif next_move == "east" || "e"  && $x == 4
             puts "It is impossible to move further east!".light_yellow
         
-        elsif next_move == "west" && $x >= 1
+        elsif next_move == "west" || "w"  && $x >= 1
             $x = $x - 1
             room()
-        elsif next_move == "west" && $x == 0
+        elsif next_move == "west" || "w"  && $x == 0
             puts "It is impossible to move further west!".light_yellow
         
         elsif next_move == "quit"
